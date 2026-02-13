@@ -1698,11 +1698,15 @@ body {
   z-index: 0;
 }
 
+.page {
+  z-index: 1;
+}
+
 .navbar {
   position: fixed !important;
   top: 20px;
   right: 20px;
-  z-index: 2147483647 !important; /* max layer */
+  z-index: 999999;
 }
 
 #menu {
