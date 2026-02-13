@@ -11,6 +11,33 @@
   z-index: 5000;
 }
 
+/* ===== HAMBURGER BASE STYLE ===== */
+.hamburger {
+  display: none;              /* default hidden (desktop) */
+  flex-direction: column;
+  gap: 5px;
+
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  z-index: 20000;             /* lebih tinggi dari light toggle */
+}
+
+/* garis hamburger */
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -109,6 +136,25 @@ body::before {
   gap: 36px;
 }
 
+/* Show menu on desktop */
+@media (min-width: 787px) {
+  .menu {
+    display: flex !important;
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    background: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    flex-direction: row !important;
+  }
+  
+  .hamburger {
+    display: none !important;
+  }
+}
+
 .menu a {
   color: #cfd9ff;
   text-decoration: none;
@@ -157,8 +203,8 @@ body::before {
 
 /* ========== HAMBURGER ========== */
 .hamburger {
-  position: fixed;   /* 🔥 GANTI dari absolute */
-  top: 19px;         /* sejajar navbar */
+  position: fixed;
+  top: 19px;
   left: 20px;
   width: 36px;
   height: 26px;
@@ -168,7 +214,7 @@ body::before {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 99999;    /* 🔥 NAIIKKAN Z-INDEX */
+  z-index: 10001;
 }
 
 .hamburger span {
@@ -179,6 +225,7 @@ body::before {
   transition: .4s ease;
 }
 
+/* HAMBURGER ANIMATION - TRANSFORMS TO X */
 .hamburger.active span:nth-child(1) {
   transform: translateY(11px) rotate(45deg);
 }
@@ -720,7 +767,7 @@ ul li a:hover {
   cursor: pointer;
   font-size: 18px;
   transition: .3s ease;
-
+  z-index: 1002;
 }
 
 .light-toggle:hover {
@@ -1282,7 +1329,9 @@ body.lights-off .mode-bubble {
   padding-top: 90px;         /* biar ga ketutup navbar */
 }
 
-  .hamburger { display: flex }
+  .hamburger { 
+    display: flex !important;
+  }
 
   .menu {
  position: fixed;
@@ -1303,7 +1352,7 @@ body.lights-off .mode-bubble {
     pointer-events: none;
     transform: translateY(-20px);
     transition: 0.3s ease;
-    z-index: 99999;
+    z-index: 10000;
 }
   
 
@@ -1435,67 +1484,7 @@ body.has-social-navbar .btn-sosmed {
 }
 
 
-/* ===== NAVBAR BASE ===== */
-.navbar {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-}
 
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: white;
-}
-
-/* ===== HAMBURGER ===== */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 10000;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 3px;
-}
-
-/* ===== MOBILE MODE ===== */
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 70%;
-    background: #111;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    transition: 0.3s ease;
-  }
-
-  .nav-menu.active {
-    right: 0;
-  }
-}
 
 
 /* ===================================== */
@@ -1658,43 +1647,5 @@ body.has-social-navbar .btn-sosmed {
   }
 }
 
-/* ===== NAVBAR DEFAULT (DESKTOP) ===== */
-.navbar {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-}
 
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-/* Hamburger hidden di desktop */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-}
-
-
-
-/* ===== MOBILE MODE ===== */
-@media (max-width: 768px) {
-
-  /* Hamburger muncul */
-  .hamburger {
-    display: flex;
-  }
-}
 
