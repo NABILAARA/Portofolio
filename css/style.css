@@ -190,25 +190,18 @@ body::before {
 
 /* ========== SECTIONS ========== */
 .page {
-  min-height: 100vh;
-   padding:
-    calc(var(--navbar-height) + var(--safe-top)) /* top */
-    var(--safe-side)                              /* right */
-    var(--safe-bottom)                            /* bottom */
+  min-height: 100dvh;   /* 🔥 GANTI INI */
+  padding:
+    calc(var(--navbar-height) + var(--safe-top))
+    var(--safe-side)
+    var(--safe-bottom)
     var(--safe-side); 
 
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: .4;
-  transform: scale(.96);
-  transition: .8s ease;
-  box-sizing: border-box;
 
-  position: relative;
-  z-index: 1; /* di atas body glow */
-
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px; /* 🔥 tambahin dikit */
 }
 
 .page.active {
@@ -1249,11 +1242,12 @@ body.lights-off .mode-bubble {
   }
 
   .page {
-    min-height: 100vh;      /* bikin full screen lagi */
-    display: flex;
-    align-items: center;    /* vertical center */
-    justify-content: center;
-  }
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-start;   /* 🔥 INI YANG PENTING */
+  justify-content: center;
+  padding-top: 90px;         /* biar ga ketutup navbar */
+}
 
   .hamburger { display: flex }
 
@@ -1420,12 +1414,13 @@ body.has-social-navbar .btn-sosmed {
     overflow-x: hidden;
   }
 
-  .page {
-    min-height: 100vh;      /* bikin full screen lagi */
-    display: flex;
-    align-items: center;    /* vertical center */
-    justify-content: center;
-  }
+ .page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-start;   /* 🔥 INI YANG PENTING */
+  justify-content: center;
+  padding-top: 90px;         /* biar ga ketutup navbar */
+}
 
   /* CARD FULL WIDTH */
   .card {
