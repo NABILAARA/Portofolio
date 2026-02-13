@@ -207,6 +207,8 @@ body::before {
 
   position: relative;
   z-index: 1; /* di atas body glow */
+
+  scroll-margin-top: 80px;
 }
 
 .page.active {
@@ -1515,6 +1517,20 @@ body.has-social-navbar .btn-sosmed {
 
   body::before {
     inset: 20px; /* biar gak kepotong di layar kecil */
+  }
+
+  
+  #projects {
+    overflow: visible !important;
+  }
+
+  #projects .project-scroll {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .page {
+    min-height: 100dvh; /* lebih stabil dari 100vh di HP */
   }
 }
 
