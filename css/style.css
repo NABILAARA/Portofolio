@@ -1399,13 +1399,12 @@ body.has-social-navbar .btn-sosmed {
 
 /* ===== NAVBAR BASE ===== */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  position: relative;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   z-index: 9999;
 }
+
 
 .nav-menu {
   display: flex;
@@ -1623,11 +1622,12 @@ body.has-social-navbar .btn-sosmed {
 
 /* ===== NAVBAR DEFAULT (DESKTOP) ===== */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
 }
+
 
 .nav-menu {
   display: flex;
