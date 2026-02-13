@@ -1285,26 +1285,32 @@ body.lights-off .mode-bubble {
   .hamburger { display: flex }
 
   .menu {
-  position: fixed;
-  top: 64px;
-  left: 16px;
+ position: fixed;
+    top: 80px;
+    left: 20px;
 
-  flex-direction: column;
-  gap: 18px;
-  padding: 20px;
-  border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 
-  background: linear-gradient(180deg,#121a3d,#0a1026);
-  box-shadow: 0 30px 60px rgba(0,0,0,.7);
+    background: linear-gradient(180deg,#121a3d,#0a1026);
+    padding: 24px;
+    border-radius: 20px;
 
-  display: none; /* 🔥 langsung hide */
+    box-shadow: 0 30px 60px rgba(0,0,0,.7);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: 0.3s ease;
+    z-index: 99999;
 }
   
 
   .menu.open {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 
   #home .card {
@@ -1690,46 +1696,5 @@ body.has-social-navbar .btn-sosmed {
   .hamburger {
     display: flex;
   }
-}
-
-
-body {
-  position: relative;
-  z-index: 0;
-}
-
-.page {
-  z-index: 1;
-}
-
-.navbar {
-  position: fixed !important;
-  top: 20px;
-  right: 20px;
-  z-index: 999999;
-}
-
-#menu {
-  position: absolute;
-  top: 60px;
-  right: 0;
-
-  background: black;
-  padding: 20px;
-  border-radius: 10px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition: 0.3s;
-}
-
-#menu.open {
-  opacity: 1;
-  visibility: visible;
 }
 
