@@ -19,7 +19,7 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  overflow: smooth;
   font-family: system-ui, sans-serif;
   background: radial-gradient(circle at top, #111a3a, #060914 60%);
   color: #eef2ff;
@@ -1397,6 +1397,118 @@ body.has-social-navbar .btn-sosmed {
     flex-direction: column;
     z-index: 9999;
   }
+}
+
+
+
+/* ===================================== */
+/* 📱 EXTRA SMALL DEVICES (HP FIX TOTAL) */
+/* ===================================== */
+@media (max-width: 480px) {
+
+  :root {
+    --safe-side: 16px;
+    --safe-top: 24px;
+    --safe-bottom: 32px;
+  }
+
+  html, body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .page {
+    padding: 100px 20px 60px;
+  }
+
+  /* CARD FULL WIDTH */
+  .card {
+    width: 100% !important;
+    padding: 32px 20px !important;
+    border-radius: 32px !important;
+    gap: 24px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* HOME SECTION FIX */
+  #home .card {
+    grid-template-columns: 1fr !important;
+    padding: 32px 20px 50px !important;
+    text-align: center;
+  }
+
+  #home .home-text {
+    margin-top: 30px;
+  }
+
+  #home .home-text h1 {
+    font-size: 1.8rem;
+  }
+
+  #home .home-text p {
+    font-size: 0.95rem;
+  }
+
+  #home .home-photo img {
+    max-width: 70% !important;
+    transform: none !important;
+  }
+
+  /* PROJECT FIX */
+  #projects .card {
+    padding: 40px 20px !important;
+    min-height: auto !important;
+  }
+
+  #projects .project-preview img {
+    max-width: 100% !important;
+    max-height: 250px !important;
+  }
+
+  #projects .project-info h2 {
+    font-size: 1.4rem;
+  }
+
+  #projects .project-info p {
+    font-size: 0.95rem;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* SKILLS FIX */
+  #skills .card {
+    padding: 40px 20px !important;
+    min-height: auto !important;
+  }
+
+  .cert-track img {
+    height: 160px !important;
+  }
+
+  /* CONTACT FIX */
+  .contact-inner {
+    max-width: 100%;
+  }
+
+  .neon-form input,
+  .neon-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .neon-form button {
+    font-size: 0.95rem;
+  }
+
+  /* SOCIAL ICON FLOAT FIX */
+  body.has-social-navbar .btn-sosmed {
+    right: 8px;
+    padding: 10px 8px;
+    gap: 10px;
+  }
+
 }
 
 
