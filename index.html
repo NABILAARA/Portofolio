@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web Portofolio Nabila Rohmatul Aulia</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body class="has-social-navbar">
+
+<nav class="navbar">
+  <button class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+
+  <button id="lightToggle" class="light-toggle">
+  🔌──✂️──🔌
+  </button>
+
+  <div class="menu" id="menu">
+    <a href="#home" data-index="0" class="active">Home</a>
+    <a href="#about" data-index="1">About</a>
+    <a href="#skills" data-index="2">Skills</a>
+    <a href="#projects" data-index="3">Projects</a>
+    <a href="#contact" data-index="4">Feedback</a>
+  </div>
+</nav>
+
+<section class="page page active" id="home">
+  <div class="card">
+    <div class="home-text home-inner">
+      <header>
+        <h1>Hi, I'm Nabila</h1>
+        <p>Welcome to my portfolio. I love exploring anything to make my website designs on-fire 🔥</p>
+      </header>
+      <div class="btn-icons desktop-only">
+        <!--View CV Button -->
+        <a href="assets/my true cv.pdf" target="_blank" class="btn">View CV</a>        
+          <ul class="btn-sosmed">            
+            <li><a href="https://wa.me/082125410648?text=Hi%20Nabila%2C%20I%20found%20your%20portfolio!" target="_blank">
+              <i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="https://instagram.com/nabilaara_" target="_blank">
+              <i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://facebook.com/nabilarohmatul.aulia" target="_blank">
+              <i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://github.com/NABILAARA" target="_blank">
+              <i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/nabila-rohmatul-aulia-8b58882a4/" target="_blank">
+              <i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="home-photo">
+      <img src="assets/i.png" alt="My Photo">
+    </div>
+  </div>
+</section>
+
+<section class="page" id="about">
+  <div class="card section-card">
+    <div class="section-inner">
+      <h1>About Me</h1>
+      <p>My name is Nabila Rohmatul Aulia.  
+        I'm a Full-Stack Web Developer from Indonesia.
+      </p>
+    </div>
+</div>
+</section>
+<section class="page" id="skills">
+  <div class="card skills-card">
+    <div class="skills-inner">
+      <h1>Skills</h1>
+      <p class="skills-desc">
+        HTML · CSS · JavaScript · WordPress · Github · Python · MySQL · Linux · Java · NetBeans · C · Figma
+      </p>
+
+      <div class="cert-marquee">
+        <div class="cert-track">
+          <img src="assets/SERTI WEB.png" alt="">
+          <img src="assets/SERTI JS.png" alt="">
+          <img src="assets/SERTI AWS.png" alt="">
+          <img src="assets/SERTI AI.png" alt="">
+          <img src="assets/SERTI PYTHON.png" alt="">
+          <img src="assets/HMIF EH.png" alt="">
+
+          <!-- DUPLICATE FOR INFINITE LOOP -->
+          <img src="assets/SERTI WEB.png" alt="">
+          <img src="assets/SERTI JS.png" alt="">
+          <img src="assets/SERTI AWS.png" alt="">
+          <img src="assets/SERTI AI.png" alt="">
+          <img src="assets/SERTI PYTHON.png" alt="">
+          <img src="assets/HMIF EH.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="page project-section" id="projects">
+  <div class="card section-card">
+    <div class="project-scroll section-inner featured-project">
+      <h1 class="scroll-glow">
+        Projects <br>
+        <span>Scroll Down ⬇️</span>
+      </h1>
+      <div class="project-main">
+
+  <!-- ================= PROJECT 1 ================= -->
+  <div class="project-preview">
+    <img src="assets/my first static web project.png" alt="Chihayafuru Resensi Anime Preview">
+  </div>
+
+  <div class="project-info">
+    <h2>(1)</h2>
+    <p>
+      Static web with dynamic layout and optimistic colours feel design.
+    </p>
+
+    <div class="tech-stack">
+      <span>HTML</span>
+      <span>CSS</span>
+    </div>
+
+    <div class="project-actions">
+      <a href="https://resensi-anime-chihayafuru-nabilaara.netlify.app/" target="_blank" class="btn btn-demo">Live Demo</a>
+      <a href="https://github.com/NABILAARA/HTML-static-project" target="_blank" class="btn btn-code">Source Code</a>
+    </div>
+  </div>
+
+  <!-- ================= PROJECT 2 ================= -->
+  <div class="project-preview">
+    <img src="assets/my first wordpress project.png" alt="WordPress Portfolio Preview">
+  </div>
+
+  <div class="project-info">
+    <h2>(2)</h2>
+    <p>
+      Instant static website using templates.
+    </p>
+
+    <div class="tech-stack">
+      <span>WordPress</span>
+      <span>CMS</span>
+    </div>
+
+    <div class="project-actions">
+      <a href="https://chihayafurunabilarohmatulaulia.great-site.net/" target="_blank" class="btn btn-demo">Live Demo</a>
+    </div>
+  </div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="contact">
+  <div class="card section-card">
+    <div class="section-inner contact-inner">
+      <h1>Your Feedback</h1>
+      <form id="contactForm" class="neon-form">        
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>    
+    </div>
+  </div>
+</section>
+
+<div id="modeBubble" class="mode-bubble">
+  ⚠ MODE PASAR MALAM
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  
+<script src="js/script.js"></script>
+
+<script src="js/email.js"></script>
+
+<script src="js/SmoothScroll.js"></script>
+
+</body>
+</html>
