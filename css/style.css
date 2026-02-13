@@ -8,7 +8,7 @@
 }
 
 .navbar {
-  z-index: 2000;
+  z-index: 5000;
 }
 
 * {
@@ -1252,7 +1252,7 @@ body.lights-off .mode-bubble {
   .hamburger { display: flex }
 
   .menu {
-    position: absolute;
+    position: fixed;
     top: 64px;
     left: 16px;
     z-index: 5000;   /* 🔥 TAMBAHKAN INI */
@@ -1533,7 +1533,7 @@ body.has-social-navbar .btn-sosmed {
  .hamburger { display: flex }
 
   .menu {
-    position: absolute;
+    position: fixed;
     top: 64px;
     left: 16px;
     z-index: 5000;   /* 🔥 TAMBAHKAN INI */
