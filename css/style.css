@@ -1255,6 +1255,9 @@ body.lights-off .mode-bubble {
     position: absolute;
     top: 64px;
     left: 16px;
+    z-index: 5000;   /* 🔥 TAMBAHKAN INI */
+
+    
     flex-direction: column;
     gap: 18px;
     padding: 20px;
@@ -1327,7 +1330,6 @@ body.lights-off .mode-bubble {
     font-size: 1rem;
   }
 
-/* ===== SOSMED - MOBILE | ATTACHED TO HAMBURGER ===== */
 
 body.has-social-navbar .btn-sosmed {
     position: fixed;
@@ -1526,6 +1528,35 @@ body.has-social-navbar .btn-sosmed {
 
   .page {
     min-height: 100dvh; /* lebih stabil dari 100vh di HP */
+
+    /* ===== SOSMED - MOBILE | ATTACHED TO HAMBURGER ===== */
+ .hamburger { display: flex }
+
+  .menu {
+    position: absolute;
+    top: 64px;
+    left: 16px;
+    z-index: 5000;   /* 🔥 TAMBAHKAN INI */
+
+    
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(180deg,#121a3d,#0a1026);
+    box-shadow: 0 30px 60px rgba(0,0,0,.7);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: .5s ease;
+    
+  }
+
+  .menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+  } 
   }
 }
 
