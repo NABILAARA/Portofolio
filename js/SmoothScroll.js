@@ -1,48 +1,83 @@
 
-// DRAG SCROLL SUPER SMOOTH 
-document.addEventListener("DOMContentLoaded", () => {
+// ===============================
+// SMOOTH SCROLL + ACTIVE SECTION
+// ===============================
 
-  const certMarquee = document.querySelector(".cert-marquee");
-  const certTrack = document.querySelector(".cert-track");
+document.addEventListener("DOMContentLoaded", function () {
 
-  let maxScroll = 0;
+  const sections = document.querySelectorAll(".page");
+  const navLinks = document.querySelectorAll(".menu a");
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
 
-  function calculateLimit() {
-  const images = certTrack.querySelectorAll("img");
+  // ===============================
+  // SMOOTH SCROLL CLICK
+  // ===============================
+  navLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
 
-  let totalWidth = 0;
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
 
-  // BATASI SAMPAI SLIDE KE-7 (index 0–6)
-  const limitSlide = 7; 
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 60, // offset navbar
+          behavior: "smooth"
+        });
+      }
 
-  for (let i = 0; i < limitSlide; i++) {
-    if (images[i]) {
-      totalWidth += images[i].offsetWidth;
+      // Close menu in mobile after click
+      if (menu.classList.contains("open")) {
+        menu.classList.remove("open");
+        hamburger.classList.remove("active");
+      }
+    });
+  });
+
+  // ===============================
+  // ACTIVE SECTION ON SCROLL
+  // ===============================
+  function activateSection() {
+
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (window.scrollY >= sectionTop - window.innerHeight / 2) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    sections.forEach(section => {
+      section.classList.remove("active");
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+    });
+
+    if (current) {
+      document.getElementById(current)?.classList.add("active");
+      document
+        .querySelector(`.menu a[href="#${current}"]`)
+        ?.classList.add("active");
     }
   }
 
-  maxScroll = totalWidth - certMarquee.clientWidth;
-  if (maxScroll < 0) maxScroll = 0;
-}
+  window.addEventListener("scroll", activateSection);
+  window.addEventListener("load", activateSection);
 
-
-  calculateLimit();
-  window.addEventListener("resize", calculateLimit);
-
-  /* ============================= */
-  /* LIMIT SCROLL SAAT LIGHTS OFF */
-  /* ============================= */
-
-  certMarquee.addEventListener("scroll", () => {
-    if (!document.body.classList.contains("lights-off")) return;
-
-    if (certMarquee.scrollLeft > maxScroll) {
-      certMarquee.scrollLeft = maxScroll;
-    }
-
-    if (certMarquee.scrollLeft < 0) {
-      certMarquee.scrollLeft = 0;
-    }
-  });
+  // ===============================
+  // HAMBURGER TOGGLE
+  // ===============================
+  if (hamburger) {
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+  }
 
 });
