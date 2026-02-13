@@ -1253,24 +1253,21 @@ body.lights-off .mode-bubble {
   .hamburger { display: flex }
 
   .menu {
-    position: fixed;
-    top: 64px;
-    left: 16px;
-    z-index: 5000;   /* 🔥 TAMBAHKAN INI */
+  position: fixed;
+  top: 64px;
+  left: 16px;
 
-    
-    flex-direction: column;
-    gap: 18px;
-    padding: 20px;
-    border-radius: 20px;
-    background: linear-gradient(180deg,#121a3d,#0a1026);
-    box-shadow: 0 30px 60px rgba(0,0,0,.7);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-20px);
-    transition: .5s ease;
-    
-  }
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 20px;
+
+  background: linear-gradient(180deg,#121a3d,#0a1026);
+  box-shadow: 0 30px 60px rgba(0,0,0,.7);
+
+  display: none; /* 🔥 langsung hide */
+}
+  
 
   .menu.open {
     opacity: 1;
@@ -1660,25 +1657,6 @@ body.has-social-navbar .btn-sosmed {
     display: flex;
   }
 
-  /* Navbar hidden dulu */
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background: #111;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    transition: 0.3s ease;
-  }
-
-  /* Kalau active baru muncul */
-  .nav-menu.active {
-    right: 0;
-  }
-}
+  
 
 
