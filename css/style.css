@@ -1693,11 +1693,16 @@ body.has-social-navbar .btn-sosmed {
 }
 
 
+body {
+  position: relative;
+  z-index: 0;
+}
+
 .navbar {
-  position: fixed;
+  position: fixed !important;
   top: 20px;
   right: 20px;
-  z-index: 100000;
+  z-index: 2147483647 !important; /* max layer */
 }
 
 #menu {
@@ -1715,6 +1720,7 @@ body.has-social-navbar .btn-sosmed {
 
   opacity: 0;
   visibility: hidden;
+
   transition: 0.3s;
 }
 
@@ -1722,3 +1728,4 @@ body.has-social-navbar .btn-sosmed {
   opacity: 1;
   visibility: visible;
 }
+
