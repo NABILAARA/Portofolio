@@ -178,12 +178,18 @@ window.addEventListener("wheel", e => {
 
 
 /* hamburger */
-const hamburger = document.getElementById("hamburger");
-const menu = document.getElementById("menu");
+document.addEventListener("DOMContentLoaded", () => {
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  menu.classList.toggle("open");
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+
+  if (!hamburger || !menu) return;
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("open");
+  });
+
 });
 
 document.addEventListener("DOMContentLoaded", () => {
