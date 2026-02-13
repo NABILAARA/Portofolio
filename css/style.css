@@ -1624,4 +1624,61 @@ body.has-social-navbar .btn-sosmed {
   }
 }
 
+/* ===== NAVBAR DEFAULT (DESKTOP) ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+/* Hamburger hidden di desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* ===== MOBILE MODE ===== */
+@media (max-width: 768px) {
+
+  /* Hamburger muncul */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Navbar hidden dulu */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #111;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: 0.3s ease;
+  }
+
+  /* Kalau active baru muncul */
+  .nav-menu.active {
+    right: 0;
+  }
+}
+
 
